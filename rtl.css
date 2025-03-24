@@ -1,0 +1,42 @@
+.alignright {
+    float: left;
+    margin: 5px 20px 20px 0;
+    text-align: left;
+}
+
+.alignleft {
+    float: right;
+    margin: 5px 0 20px 20px;
+    text-align: right;
+}
+
+.comment-content ul,
+.comment-content ol,
+.entry-content ul,
+.entry-content ol {
+    padding-left: inherit;
+    padding-right: 20px;
+}
+
+.sidebar .widget ul ul {
+    padding-left: 0;
+    padding-right: 20px;
+}
+
+.sidebar .widget_nav_menu .sub-menu {
+    padding-left: inherit;
+    padding-right: 0;
+}
+
+.entry-content .wp-block-list {
+    padding-left: inherit;
+    padding-right: 20px;
+}
+
+@media screen and (max-width:991px) {
+    .header-menu .menu>li>a,
+    .header-menu li a,
+    .header-menu .sub-menu li a {
+        padding: 0 10px 0 0;
+    }
+}

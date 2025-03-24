@@ -1,0 +1,56 @@
+.wp-block-legacy-widget__edit-preview-iframe {
+  max-height: 100%;
+}
+
+.first-agency-welcome .items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.first-agency-welcome .item {
+  width: 50%;
+}
+
+.first-agency-welcome .item .inner-item {
+  text-align: center;
+  padding: 30px 15px;
+  border: 1px solid #3333;
+  margin: 15px;
+  background: #fff;
+}
+
+.first-agency-welcome .item .inner-item textarea {
+  width: 100%;
+  min-height: 80px;
+}
+
+#first-agency-one-click-demo-import{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#first-agency-one-click-demo-import .icn-spinner {
+  display: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  border-bottom-color: #fff;
+  animation: spin-animation 0.5s infinite;
+  animation-timing-function: linear;
+}
+
+#first-agency-one-click-demo-import .icn-spinner.active {
+  display: inline-block;
+}
+
+@keyframes spin-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(359deg);
+  }
+}
