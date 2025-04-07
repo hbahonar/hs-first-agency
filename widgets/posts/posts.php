@@ -6,8 +6,8 @@ if (!defined('ABSPATH')) {
     exit(); // Exit if accessed directly.
 }
 
-if (!class_exists('BHR_Posts')) {
-    class BHR_Posts extends Elementor\Widget_Base
+if (!class_exists('first_agency_Posts')) {
+    class first_agency_Posts extends Elementor\Widget_Base
     {
         public function __construct($data = [], $args = null)
         {
@@ -97,6 +97,6 @@ if (!class_exists('BHR_Posts')) {
         }
     }
     Elementor\Plugin::instance()->widgets_manager->register_widget_type(
-        new BHR_Posts()
+        new first_agency_Posts()
     );
 }

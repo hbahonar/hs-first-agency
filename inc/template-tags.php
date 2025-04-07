@@ -43,7 +43,7 @@ if (!function_exists('first_agency_post_thumbnail')) {
 if (!function_exists('first_agency_archive_post_category')) {
     function first_agency_archive_post_category()
     {
-        $categories_list = get_the_category_list(_x(' ', 'Used between list items, there is a space after the comma.', 'hs-first-agency'));
+        $categories_list = get_the_category_list(_x(' ', 'Used between list items, there is a space after the comma.', 'hs-first-agency'));// phpcs:ignore WordPress.WP.I18n.NoEmptyStrings
         if ($categories_list) : ?>
             <span class="categories">
                 <?php printf('<span class="screen-reader-text">%1$s </span> %2$s', esc_html__('Used before category names.', 'hs-first-agency'), wp_kses($categories_list, array('a' => array('href' => array(), 'rel' => array())))); ?>

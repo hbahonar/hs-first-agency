@@ -28,6 +28,13 @@ First Agency is distributed under the terms of the GNU GPL
 * Based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * normalize.css https://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](https://opensource.org/licenses/MIT)
 
+== Library Licenses ==
+
+Tailwindcss v3.0.0
+Licensed under MIT 
+License: https://github.com/tailwindlabs/tailwindcss?tab=MIT-1-ov-file#readme
+Source URL: https://github.com/tailwindlabs/tailwindcss
+
 == Screenshot Licenses ==
 
 Screenshot image is a collage of actual sites created using the First Agency WordPress Theme.
@@ -35,25 +42,22 @@ Images that appear in the collage are licensed under CC0.
 
 Image for theme screenshot, Credit PxHere
 License: CC0 1.0 Universal (CC0 1.0)
-License URL: https://www.pexels.com/license/
+License URL: https://pxhere.com/en/license
 
-Source: https://www.pexels.com/photo/portrait-of-man-15406458/
-Source: https://www.pexels.com/photo/businesswoman-in-her-office-4427610/
-Source: https://www.pexels.com/photo/confident-businesswoman-4342352/
-Source: https://www.pexels.com/photo/colleagues-looking-at-survey-sheet-3183153/
-Source: https://www.pexels.com/photo/photo-of-person-using-laptop-3183174/
-Source: https://www.pexels.com/photo/photo-of-people-doing-handshakes-3183197/
-Source: https://www.pexels.com/photo/man-wearing-brown-suit-jacket-3184339/
-Source: https://www.pexels.com/photo/turned-on-gray-laptop-computer-on-table-699459/
-Source: https://www.pexels.com/photo/person-holding-blue-ballpoint-pen-on-white-notebook-669610/
-Source: https://www.pexels.com/photo/woman-pointing-on-the-white-paper-7688460/
-Source: https://www.pexels.com/photo/question-marks-on-craft-paper-5428830/
-Source: https://www.pexels.com/photo/man-standing-while-holding-red-marker-pen-facing-marker-board-7369/
-Source: https://www.pexels.com/photo/blue-printer-paper-7376/
-Source: https://www.pexels.com/photo/man-in-black-jacket-wearing-eyeglasses-3990502/
-Source: https://www.pexels.com/photo/a-man-in-blue-suit-jacket-standing-beside-the-whiteboard-7693148/
+Source: https://pxhere.com/en/photo/710504
+Source: https://pxhere.com/en/photo/714869
+Source: https://pxhere.com/en/photo/723651
+Source: https://pxhere.com/en/photo/764675
+Source: https://pxhere.com/en/photo/868229
+Source: https://pxhere.com/en/photo/884257
+Source: https://pxhere.com/en/photo/1076173
+Source: https://pxhere.com/en/photo/1083812
+Source: https://pxhere.com/en/photo/1433619
+Source: https://pxhere.com/en/photo/1442697
+Source: https://pxhere.com/en/photo/1629578
+Source: https://pxhere.com/en/photo/1652040
 
-First Agency uses Roboto Google font for default
+First Agency uses Manrope and Comfortaa Google font for default
 These fonts are licensed under the Open Font License (https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL).
 You can use them freely in your products & projects - print or digital, commercial or otherwise.
 License: https://fonts.google.com/specimen/Manrope/license

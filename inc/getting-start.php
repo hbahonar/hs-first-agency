@@ -3,20 +3,11 @@
 /*******************************************************************************
  *  Get Started Notice
  *******************************************************************************/
+if (!function_exists('first_agency_getting_start_admin_notices')) {
+    add_action('admin_notices', 'first_agency_getting_start_admin_notices');
+    function first_agency_getting_start_admin_notices()
+    {
 
-/**
- * AJAX handler to store the state of dismissible notices.
- */
-add_action('wp_ajax_first_agency__dismissed_notice_handler', function () {
-    update_option('dismissed-get_started', TRUE);
-});
-
-add_action('admin_notices', function () {
-    // Check if it's been dismissed...
-    if (! get_option('dismissed-get_started', FALSE)) {
-        // Added the class "notice-get-started-class" so jQuery pick it up and pass via AJAX,
-        // and added "data-notice" attribute in order to track multiple / different notices
-        // multiple dismissible notice states 
 ?>
         <div class="updated notice notice-get-started-class is-dismissible" data-notice="get_started">
             <div class="first-agency-getting-started-notice clearfix">
@@ -29,7 +20,7 @@ add_action('admin_notices', function () {
                         printf(
                             /* translators: 1: welcome page link starting html tag, 2: welcome page link ending html tag. */
                             esc_html__('Welcome! Thank you for choosing %1$s!', 'hs-first-agency'),
-                            '<strong>' . wp_get_theme()->get('Name') . '</strong>'
+                            '<strong>' . esc_html(wp_get_theme()->get('Name')) . '</strong>'
                         );
                         ?>
                     </h2>
@@ -46,5 +37,6 @@ add_action('admin_notices', function () {
                 </div><!-- /.first-agency-theme-notice-content -->
             </div>
         </div>
-<?php }
-});
+<?php
+    }
+}

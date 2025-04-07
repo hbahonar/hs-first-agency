@@ -1,5 +1,5 @@
 <?php
-class BHR_Theme_Class{
+class first_agency_Theme_Class{
     public static $theme_name = 'First Agency';
     public static $theme_slug = 'hs-first-agency';
     public static $theme_prefix = 'first_agency';

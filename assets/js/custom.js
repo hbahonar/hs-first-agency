@@ -67,36 +67,39 @@
 })(jQuery);
 
 /*menu accessibility loop*/
-document.querySelector(".header-menu").addEventListener("     ", function (e) {
-  var element = document.querySelector(".header-menu");
-  var focusableElsAll = element.querySelectorAll(
-    'a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"]'
-  );
+var node = document.querySelector(".header-menu");
+if (node) {
+  node.addEventListener("keydown", function (e) {
+    var element = document.querySelector(".header-menu");
+    var focusableElsAll = element.querySelectorAll(
+      'a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"]'
+    );
 
-  var focusableEls = [];
-  focusableElsAll.forEach(function (item) {
-    if (
-      element.currentStyle
-        ? element.currentStyle.display !== "none"
-        : getComputedStyle(item, null).display !== "none"
-    ) {
-      focusableEls = [...focusableEls, item];
+    var focusableEls = [];
+    focusableElsAll.forEach(function (item) {
+      if (
+        element.currentStyle
+          ? element.currentStyle.display !== "none"
+          : getComputedStyle(item, null).display !== "none"
+      ) {
+        focusableEls = [...focusableEls, item];
+      }
+    });
+
+    var firstFocusableEl = focusableEls[0];
+    var lastFocusableEl = focusableEls[focusableEls.length - 1];
+    if (e.key === "tap" || e.keyCode === 9) {
+      if (e.shiftKey) {
+        /* shift + tab */ if (document.activeElement === firstFocusableEl) {
+          lastFocusableEl.focus();
+          e.preventDefault();
+        }
+      } /* tab */ else {
+        if (document.activeElement === lastFocusableEl) {
+          firstFocusableEl.focus();
+          e.preventDefault();
+        }
+      }
     }
   });
-
-  var firstFocusableEl = focusableEls[0];
-  var lastFocusableEl = focusableEls[focusableEls.length - 1];
-  if (e.key === "tap" || e.keyCode === 9) {
-    if (e.shiftKey) {
-      /* shift + tab */ if (document.activeElement === firstFocusableEl) {
-        lastFocusableEl.focus();
-        e.preventDefault();
-      }
-    } /* tab */ else {
-      if (document.activeElement === lastFocusableEl) {
-        firstFocusableEl.focus();
-        e.preventDefault();
-      }
-    }
-  }
-});
+}
