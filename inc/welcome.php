@@ -16,10 +16,6 @@ if (!function_exists('first_agency_add_admin_menu')) {
     if (!function_exists('first_agency_add_welcome_admin_enqueue_scripts')) {
         function first_agency_add_welcome_admin_enqueue_scripts($hook)
         {
-            if ($hook != 'toplevel_page_first_agency_welcome') {
-                return;
-            }
-
             wp_enqueue_style('first-agency-admin-css', get_template_directory_uri() . '/assets/css/admin.css', array(), '1');
 
             wp_enqueue_script('admin-js', get_template_directory_uri() . '/assets/js/admin.js', array('jquery-core'), false, true);
