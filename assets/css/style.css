@@ -840,6 +840,10 @@ textarea:focus-visible {
 }
 
 /*** footer ***/
+.footer p a {
+    text-decoration: underline;
+}
+
 /*menu*/
 .footer-menu ul {
     display: flex;

@@ -10,7 +10,7 @@ for ($counter = 1; $counter <= $footer_column_count; $counter++) {
 <?php
 if ($is_footer_active) : ?>
     <footer class="site-footer">
-        <div class="inner-footer p-[60px_30px] grid grid-cols-1 lg:grid-cols-<?php echo esc_attr($footer_column_count) ?>">
+        <div class="inner-footer p-[60px_30px] grid grid-cols-1 lg:grid-cols-<?php echo esc_attr($footer_column_count) ?> gap-[60px] px-[5px] lg:px-[60px]">
             <?php for ($counter = 1; $counter <= $footer_column_count; $counter++) : ?>
                 <div class="footer w-full">
                     <?php if (is_active_sidebar('footer' . $counter)) : ?>

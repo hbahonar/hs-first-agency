@@ -1,7 +1,7 @@
 === First Agency ===
 Contributors: honarsystems
 Requires at least: 5.6
-Tested up to: 6.5
+Tested up to: 6.8
 Requires PHP: 5.6
 Stable tag: 1.0
 Tags: one-column, two-columns, left-sidebar, right-sidebar, flexible-header, custom-background, custom-colors, custom-menu,  custom-logo, featured-image-header, featured-images, footer-widgets, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, rtl-language-support, portfolio, editor-style, grid-layout, wide-blocks
@@ -39,23 +39,6 @@ Source URL: https://github.com/tailwindlabs/tailwindcss
 
 Screenshot image is a collage of actual sites created using the First Agency WordPress Theme.
 Images that appear in the collage are licensed under CC0.
-
-Image for theme screenshot, Credit PxHere
-License: CC0 1.0 Universal (CC0 1.0)
-License URL: https://pxhere.com/en/license
-
-Source: https://pxhere.com/en/photo/710504
-Source: https://pxhere.com/en/photo/714869
-Source: https://pxhere.com/en/photo/723651
-Source: https://pxhere.com/en/photo/764675
-Source: https://pxhere.com/en/photo/868229
-Source: https://pxhere.com/en/photo/884257
-Source: https://pxhere.com/en/photo/1076173
-Source: https://pxhere.com/en/photo/1083812
-Source: https://pxhere.com/en/photo/1433619
-Source: https://pxhere.com/en/photo/1442697
-Source: https://pxhere.com/en/photo/1629578
-Source: https://pxhere.com/en/photo/1652040
 
 First Agency uses Manrope and Comfortaa Google font for default
 These fonts are licensed under the Open Font License (https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL).
