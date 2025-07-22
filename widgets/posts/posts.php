@@ -6,8 +6,8 @@ if (!defined('ABSPATH')) {
     exit(); // Exit if accessed directly.
 }
 
-if (!class_exists('first_agency_Posts')) {
-    class first_agency_Posts extends Elementor\Widget_Base
+if (!class_exists('hs_first_agency_Posts')) {
+    class hs_first_agency_Posts extends Elementor\Widget_Base
     {
         public function __construct($data = [], $args = null)
         {
@@ -15,7 +15,7 @@ if (!class_exists('first_agency_Posts')) {
         }
         public function get_name()
         {
-            return 'first_agency_posts';
+            return 'hs_first_agency_posts';
         }
 
         public function get_title()
@@ -97,6 +97,6 @@ if (!class_exists('first_agency_Posts')) {
         }
     }
     Elementor\Plugin::instance()->widgets_manager->register_widget_type(
-        new first_agency_Posts()
+        new hs_first_agency_Posts()
     );
 }

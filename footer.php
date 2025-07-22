@@ -1,7 +1,7 @@
 </main>
 <?php
 $is_footer_active = false;
-$footer_column_count = get_theme_mod('first_agency_footer_columns', '1');
+$footer_column_count = get_theme_mod('hs_first_agency_footer_columns', '1');
 for ($counter = 1; $counter <= $footer_column_count; $counter++) {
     if (is_active_sidebar('footer' . $counter)) {
         $is_footer_active = true;
@@ -33,7 +33,7 @@ if ($is_footer_active) : ?>
 <?php endif; ?>
 
 <?php
-$copyright = get_theme_mod('first_agency_copyright_text', '© {year} {site_name}');
+$copyright = get_theme_mod('hs_first_agency_copyright_text', '© {year} {site_name}');
 if (!empty($copyright)) :
 ?>
     <div class="site-copyright flex items-center justify-center py-[15px] text-[0.9rem]">

@@ -1,7 +1,7 @@
 <?php
-if (!function_exists('first_agency_widgets_init')) {
-    add_action('widgets_init', 'first_agency_widgets_init');
-    function first_agency_widgets_init()
+if (!function_exists('hs_first_agency_widgets_init')) {
+    add_action('widgets_init', 'hs_first_agency_widgets_init');
+    function hs_first_agency_widgets_init()
     {
         register_sidebar(
             array(
@@ -36,7 +36,7 @@ if (!function_exists('first_agency_widgets_init')) {
             )
         );
 
-        for ($counter = 1; $counter <= get_theme_mod('first_agency_footer_columns', '1'); $counter++) :
+        for ($counter = 1; $counter <= get_theme_mod('hs_first_agency_footer_columns', '1'); $counter++) :
             $name = 'Footer Column %s';
             $name = sprintf($name, $counter);
             register_sidebar(

@@ -1,6 +1,6 @@
 <?php
-if (!function_exists('first_agency_print_first_instance_of_block')) {
-    function first_agency_print_first_instance_of_block($block_name, $content = null, $instances = 1)
+if (!function_exists('hs_first_agency_print_first_instance_of_block')) {
+    function hs_first_agency_print_first_instance_of_block($block_name, $content = null, $instances = 1)
     {
         $instances_count = 0;
         $blocks_content  = '';
@@ -55,9 +55,9 @@ if (!function_exists('first_agency_print_first_instance_of_block')) {
 }
 
 //logo
-if (!function_exists('first_agency_logo')) {
-    add_action('first_agency_logo', 'first_agency_logo');
-    function first_agency_logo()
+if (!function_exists('hs_first_agency_logo')) {
+    add_action('hs_first_agency_logo', 'hs_first_agency_logo');
+    function hs_first_agency_logo()
     {
         if (has_custom_logo()) : ?>
             <?php the_custom_logo(); ?>
@@ -69,18 +69,18 @@ if (!function_exists('first_agency_logo')) {
                     ?>
                 </h4>
             </a>
-            <?php $first_agency_description = get_bloginfo('description'); ?>
-            <?php if ($first_agency_description) : ?>
-                <p class="site-description"><?php echo esc_html($first_agency_description); ?></p>
+            <?php $hs_first_agency_description = get_bloginfo('description'); ?>
+            <?php if ($hs_first_agency_description) : ?>
+                <p class="site-description"><?php echo esc_html($hs_first_agency_description); ?></p>
         <?php endif;
         endif;
     }
 }
 
 //header menu
-if (!function_exists('first_agency_nav_menu')) {
-    add_action('first_agency_nav_menu', 'first_agency_nav_menu', 10, 2);
-    function first_agency_nav_menu()
+if (!function_exists('hs_first_agency_nav_menu')) {
+    add_action('hs_first_agency_nav_menu', 'hs_first_agency_nav_menu', 10, 2);
+    function hs_first_agency_nav_menu()
     {
         if (!has_nav_menu('main-menu')) {
             return;
@@ -96,7 +96,7 @@ if (!function_exists('first_agency_nav_menu')) {
                 </div>
                 <nav class="">
                     <div class="flex lg:hidden flex justify-center my-[50px]">
-                        <?php do_action('first_agency_logo'); ?>
+                        <?php do_action('hs_first_agency_logo'); ?>
                     </div>
                     <?php
                     wp_nav_menu([
@@ -114,28 +114,28 @@ if (!function_exists('first_agency_nav_menu')) {
 }
 
 //excerpt length
-if (!function_exists('first_agency_excerpt_length')) {
-    add_filter("excerpt_length", 'first_agency_excerpt_length', 999);
-    function first_agency_excerpt_length($length)
+if (!function_exists('hs_first_agency_excerpt_length')) {
+    add_filter("excerpt_length", 'hs_first_agency_excerpt_length', 999);
+    function hs_first_agency_excerpt_length($length)
     {
         if (is_admin()) {
             return $length;
         }
-        return esc_attr(get_theme_mod('first_agency_archive_content_length', '20'));
+        return esc_attr(get_theme_mod('hs_first_agency_archive_content_length', '20'));
     }
 }
 
 
-if (!function_exists('first_agency_excerpt_more')) {
-    add_filter('excerpt_more', 'first_agency_excerpt_more');
-    function first_agency_excerpt_more($more)
+if (!function_exists('hs_first_agency_excerpt_more')) {
+    add_filter('excerpt_more', 'hs_first_agency_excerpt_more');
+    function hs_first_agency_excerpt_more($more)
     {
         return ' ...';
     }
 }
 
 /*Custom Comment*/
-if (!function_exists('first_agency_comment_form_fields')) {
+if (!function_exists('hs_first_agency_comment_form_fields')) {
     add_filter('comment_form_fields', 'comment_form_fields');
     function comment_form_fields($fields)
     {
@@ -149,8 +149,8 @@ if (!function_exists('first_agency_comment_form_fields')) {
     }
 }
 
-if (!function_exists('first_agency_custom_comment_list')) {
-    function first_agency_custom_comment_list($comment, $args, $depth)
+if (!function_exists('hs_first_agency_custom_comment_list')) {
+    function hs_first_agency_custom_comment_list($comment, $args, $depth)
     {
     ?>
         <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
@@ -208,9 +208,9 @@ if (!function_exists('first_agency_custom_comment_list')) {
 }
 
 /* check post title */
-if (!function_exists('first_agency_check_the_title')) {
-    add_filter('the_title', 'first_agency_check_the_title', 10, 2);
-    function first_agency_check_the_title($title, $id)
+if (!function_exists('hs_first_agency_check_the_title')) {
+    add_filter('the_title', 'hs_first_agency_check_the_title', 10, 2);
+    function hs_first_agency_check_the_title($title, $id)
     {
         if (empty($title)) {
             return __('Untitled', 'hs-first-agency');

@@ -1,6 +1,6 @@
 <?php
-if (!function_exists('first_agency_setup_theme')) {
-    function first_agency_setup_theme()
+if (!function_exists('hs_first_agency_setup_theme')) {
+    function hs_first_agency_setup_theme()
     {
 
         // Add default posts and comments RSS feed links to head.
@@ -116,7 +116,7 @@ if (!function_exists('first_agency_setup_theme')) {
         add_theme_support(
             'custom-background',
             apply_filters(
-                'first_agency_custom_background_args',
+                'hs_first_agency_custom_background_args',
                 array(
                     'default-color' => 'ffffff',
                     'default-image' => '',
@@ -124,9 +124,9 @@ if (!function_exists('first_agency_setup_theme')) {
             )
         );
 
-        $GLOBALS['content_width'] = apply_filters('first_agency_content_width', 1170);
+        $GLOBALS['content_width'] = apply_filters('hs_first_agency_content_width', 1170);
     }
-    add_action('after_setup_theme', 'first_agency_setup_theme');
+    add_action('after_setup_theme', 'hs_first_agency_setup_theme');
 }
 
 
@@ -148,9 +148,9 @@ require_once get_template_directory() . '/inc/welcome.php';
  *
  * @link https://git.io/vWdr2
  */
-if (!function_exists('first_agency_footer_scripts')) {
-    add_action('wp_print_footer_scripts','first_agency_footer_scripts');
-    function first_agency_footer_scripts() {
+if (!function_exists('hs_first_agency_footer_scripts')) {
+    add_action('wp_print_footer_scripts','hs_first_agency_footer_scripts');
+    function hs_first_agency_footer_scripts() {
 
         // If SCRIPT_DEBUG is defined and true, print the unminified file.
         if (defined('SCRIPT_DEBUG') && SCRIPT_DEBUG) {

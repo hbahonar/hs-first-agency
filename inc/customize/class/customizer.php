@@ -1,6 +1,6 @@
 <?php
-if (!class_exists('first_agency_Customizer')) {
-    class first_agency_Customizer
+if (!class_exists('hs_first_agency_Customizer')) {
+    class hs_first_agency_Customizer
     {
         private $wp_customize;
         public static $SWITCH = 1, $COLOR = 2, $TEXT = 3, $NUMBER = 4, $SELECT = 5, $TEXTAREA = 6, $HEADING = 7, $GETPROBUTTON = 8;
@@ -37,7 +37,7 @@ if (!class_exists('first_agency_Customizer')) {
                         )
                     );
 
-                    $this->wp_customize->add_control(new first_agency_Text_Radio_Button_Custom_Control(
+                    $this->wp_customize->add_control(new hs_first_agency_Text_Radio_Button_Custom_Control(
                         $this->wp_customize,
                         $args['id'],
                         array(
@@ -84,7 +84,7 @@ if (!class_exists('first_agency_Customizer')) {
                         'sanitize_callback' => 'esc_attr'
                     ));
 
-                    $this->wp_customize->add_control(new first_agency_Input_Number_Option($this->wp_customize, $args['id'], array(
+                    $this->wp_customize->add_control(new hs_first_agency_Input_Number_Option($this->wp_customize, $args['id'], array(
                         'type' => 'input',
                         'label' => !empty($args['title']) ? $args['title'] : '',
                         'description' => !empty($args['description']) ? $args['description'] : '',
@@ -98,7 +98,7 @@ if (!class_exists('first_agency_Customizer')) {
                 case self::$SELECT:
                     $this->wp_customize->add_setting($args['id'], array(
                         'capability' => 'edit_theme_options',
-                        'sanitize_callback' => 'first_agency_sanitize_select',
+                        'sanitize_callback' => 'hs_first_agency_sanitize_select',
                         'default' => !empty($args['default']) ? $args['default'] : '',
                     ));
 
@@ -116,7 +116,7 @@ if (!class_exists('first_agency_Customizer')) {
                         'transport' => 'refresh',
                         'default' => !empty($args['default']) ? $args['default'] : '',
                         'capability' => 'edit_theme_options',
-                        'sanitize_callback' => 'first_agency_sanitize_textarea_html'
+                        'sanitize_callback' => 'hs_first_agency_sanitize_textarea_html'
                     ));
 
                     $this->wp_customize->add_control(new WP_Customize_Control($this->wp_customize, $args['id'], array(
@@ -134,7 +134,7 @@ if (!class_exists('first_agency_Customizer')) {
                         'sanitize_callback' => 'esc_attr'
                     ));
 
-                    $this->wp_customize->add_control(new first_agency_Heading($this->wp_customize, $args['id'], array(
+                    $this->wp_customize->add_control(new hs_first_agency_Heading($this->wp_customize, $args['id'], array(
                         'label' => !empty($args['title']) ? $args['title'] : '',
                         'description' => !empty($args['description']) ? $args['description'] : '',
                         'section' => $args['section_id'],
@@ -148,7 +148,7 @@ if (!class_exists('first_agency_Customizer')) {
                         'sanitize_callback' => 'esc_attr'
                     ));
 
-                    $this->wp_customize->add_control(new first_agency_Get_Pro_Button_Custom_Control($this->wp_customize, $args['id'], array(
+                    $this->wp_customize->add_control(new hs_first_agency_Get_Pro_Button_Custom_Control($this->wp_customize, $args['id'], array(
                         'label' => !empty($args['title']) ? $args['title'] : '',
                         'description' => !empty($args['description']) ? $args['description'] : '',
                         'choices' => [!empty($args['link']) ? $args['link'] : '#'],
@@ -162,7 +162,7 @@ if (!class_exists('first_agency_Customizer')) {
 }
 
 if (class_exists('WP_Customize_Control')) {
-    if (!class_exists('first_agency_Text_Radio_Button_Custom_Control')) {
+    if (!class_exists('hs_first_agency_Text_Radio_Button_Custom_Control')) {
         /**
          * Text Radio Button Custom Control
          *
@@ -170,7 +170,7 @@ if (class_exists('WP_Customize_Control')) {
          * @license http://www.gnu.org/licenses/gpl-2.0.html
          * @link https://github.com/maddisondesigns
          */
-        class first_agency_Text_Radio_Button_Custom_Control extends WP_Customize_Control
+        class hs_first_agency_Text_Radio_Button_Custom_Control extends WP_Customize_Control
         {
             /**
              * The type of control being rendered
@@ -217,8 +217,8 @@ if (class_exists('WP_Customize_Control')) {
         }
     }
 
-    if (!class_exists('first_agency_Input_Number_Option')) {
-        class first_agency_Input_Number_Option extends WP_Customize_Control
+    if (!class_exists('hs_first_agency_Input_Number_Option')) {
+        class hs_first_agency_Input_Number_Option extends WP_Customize_Control
         {
             public function render_content()
             {
@@ -238,8 +238,8 @@ if (class_exists('WP_Customize_Control')) {
         }
     }
 
-    if (!class_exists('first_agency_Heading')) {
-        class first_agency_Heading extends WP_Customize_Control
+    if (!class_exists('hs_first_agency_Heading')) {
+        class hs_first_agency_Heading extends WP_Customize_Control
         {
             protected function render()
             {
@@ -263,8 +263,8 @@ if (class_exists('WP_Customize_Control')) {
         }
     }
 
-    if (!class_exists('first_agency_Get_Pro_Button_Custom_Control')) {
-        class first_agency_Get_Pro_Button_Custom_Control extends WP_Customize_Control
+    if (!class_exists('hs_first_agency_Get_Pro_Button_Custom_Control')) {
+        class hs_first_agency_Get_Pro_Button_Custom_Control extends WP_Customize_Control
         {
             /**
              * Render the control in the customizer
@@ -288,8 +288,8 @@ if (class_exists('WP_Customize_Control')) {
 
 
 
-if (!function_exists('first_agency_sanitize_select')) {
-    function first_agency_sanitize_select($input, $setting)
+if (!function_exists('hs_first_agency_sanitize_select')) {
+    function hs_first_agency_sanitize_select($input, $setting)
     {
         $input = sanitize_key($input);
         $choices = $setting->manager->get_control($setting->id)->choices;
@@ -297,15 +297,15 @@ if (!function_exists('first_agency_sanitize_select')) {
     }
 }
 
-if (!function_exists('first_agency_sanitize_textarea_html')) {
-    function first_agency_sanitize_textarea_html($input)
+if (!function_exists('hs_first_agency_sanitize_textarea_html')) {
+    function hs_first_agency_sanitize_textarea_html($input)
     {
         return wp_kses_post($input);
     }
 }
 
-if (!function_exists('first_agency_sanitize_image')) {
-    function first_agency_sanitize_image($file, $setting)
+if (!function_exists('hs_first_agency_sanitize_image')) {
+    function hs_first_agency_sanitize_image($file, $setting)
     {
         $mimes = array(
             'jpg|jpeg|jpe' => 'image/jpeg',

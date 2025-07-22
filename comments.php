@@ -38,7 +38,7 @@ if (post_password_required()) {
                 array(
                     'short_ping' => true,
                     'avatar_size' => 50,
-                    'callback' => 'first_agency_custom_comment_list'
+                    'callback' => 'hs_first_agency_custom_comment_list'
                 )
             );
             ?>

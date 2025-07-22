@@ -1,28 +1,28 @@
 <?php
 
-if (!function_exists('first_agency_add_admin_menu')) {
-    function first_agency_add_admin_menu()
+if (!function_exists('hs_first_agency_add_admin_menu')) {
+    function hs_first_agency_add_admin_menu()
     {
         add_theme_page(
             __('First Agency', 'hs-first-agency'),
             __('First Agency', 'hs-first-agency'),
             'edit_theme_options',
-            'first_agency_welcome',
-            'first_agency_welcome_page_contents'
+            'hs_first_agency_welcome',
+            'hs_first_agency_welcome_page_contents'
         );
     }
-    add_action('admin_menu', 'first_agency_add_admin_menu');
+    add_action('admin_menu', 'hs_first_agency_add_admin_menu');
 
-    if (!function_exists('first_agency_add_welcome_admin_enqueue_scripts')) {
-        function first_agency_add_welcome_admin_enqueue_scripts($hook)
+    if (!function_exists('hs_first_agency_add_welcome_admin_enqueue_scripts')) {
+        function hs_first_agency_add_welcome_admin_enqueue_scripts($hook)
         {
             wp_enqueue_style('first-agency-admin-css', get_template_directory_uri() . '/assets/css/admin.css', array(), '1');
         }
-        add_action('admin_enqueue_scripts', 'first_agency_add_welcome_admin_enqueue_scripts');
+        add_action('admin_enqueue_scripts', 'hs_first_agency_add_welcome_admin_enqueue_scripts');
     }
 
-    if (!function_exists('first_agency_welcome_page_contents')) {
-        function first_agency_welcome_page_contents()
+    if (!function_exists('hs_first_agency_welcome_page_contents')) {
+        function hs_first_agency_welcome_page_contents()
         {
 ?>
 

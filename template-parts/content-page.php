@@ -6,17 +6,17 @@ if (!defined('ABSPATH')) {
 <div id="content" class="">
     <div class="flex flex-wrap lg:flex-nowrap py-[30px]">
         <?php if (is_rtl() ? is_active_sidebar('right_sidebar') : is_active_sidebar('left_sidebar')) : ?>
-            <div class="w-full md:w-[<?php echo esc_attr(get_theme_mod('first_agency_archive_sidebar_width', '25')) ?>%]">
+            <div class="w-full md:w-[<?php echo esc_attr(get_theme_mod('hs_first_agency_archive_sidebar_width', '25')) ?>%]">
                 <?php is_rtl() ? get_sidebar('right') : get_sidebar('left'); ?>
             </div>
         <?php endif; ?>
         <?php
         $content_width = 100;
         if (is_active_sidebar('right_sidebar')) {
-            $content_width -= intval(get_theme_mod('first_agency_archive_sidebar_width', '25'));
+            $content_width -= intval(get_theme_mod('hs_first_agency_archive_sidebar_width', '25'));
         }
         if (is_active_sidebar('left_sidebar')) {
-            $content_width -= intval(get_theme_mod('first_agency_archive_sidebar_width', '25'));
+            $content_width -= intval(get_theme_mod('hs_first_agency_archive_sidebar_width', '25'));
         }
         ?>
         <div class="w-full lg:w-[<?php echo esc_html($content_width); ?>%] px-[5px] lg:px-[30px]">
@@ -25,7 +25,7 @@ if (!defined('ABSPATH')) {
                     the_post(); ?>
                     <article <?php post_class('post'); ?>>
                         <div class="">
-                            <?php first_agency_post_thumbnail(); ?>
+                            <?php hs_first_agency_post_thumbnail(); ?>
                         </div>
                         <div class="mt-[30px]">
                             <span class="date text-[0.8rem] lg:text-[1rem]"><?php echo esc_html(get_the_date('M j, Y')); ?></span>
@@ -35,7 +35,7 @@ if (!defined('ABSPATH')) {
                             </span>
                         </div>
 
-                        <?php first_agency_post_title(); ?>
+                        <?php hs_first_agency_post_title(); ?>
 
                         <div class="entry-content after:content-[''] after:block after:clear-both">
                             <?php the_content(); ?>
@@ -52,13 +52,13 @@ if (!defined('ABSPATH')) {
                             );
                             ?>
                         </div>
-                        <?php first_agency_post_comment(); ?>
+                        <?php hs_first_agency_post_comment(); ?>
                     </article>
                 <?php endwhile; ?>
             <?php endif; ?>
         </div>
         <?php if (is_rtl() ? is_active_sidebar('left_sidebar') : is_active_sidebar('right_sidebar')) : ?>
-            <div class="w-full lg:w-[<?php echo esc_attr(get_theme_mod('first_agency_archive_sidebar_width', '25')) ?>%]">
+            <div class="w-full lg:w-[<?php echo esc_attr(get_theme_mod('hs_first_agency_archive_sidebar_width', '25')) ?>%]">
                 <?php is_rtl() ? get_sidebar('left') : get_sidebar('right'); ?>
             </div>
         <?php endif; ?>

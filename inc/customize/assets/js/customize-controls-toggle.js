@@ -3,7 +3,7 @@
 
 	$.bind('ready', function () {
 		var item_check = [
-			['first_agency_header_sticky_entire_website', ['first_agency_header_sticky_bg_color'], 'yes'],
+			['hs_first_agency_header_sticky_entire_website', ['hs_first_agency_header_sticky_bg_color'], 'yes'],
 		];
 
 		item_check.forEach(function (item, index) {

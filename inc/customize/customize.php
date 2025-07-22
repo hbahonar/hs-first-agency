@@ -3,23 +3,23 @@
 /**
  * @package WordPress
  */
-if (!function_exists('first_agency_customize_controls_enqueue_scripts')) {
-    add_action('customize_controls_enqueue_scripts', 'first_agency_customize_controls_enqueue_scripts');
-    function first_agency_customize_controls_enqueue_scripts()
+if (!function_exists('hs_first_agency_customize_controls_enqueue_scripts')) {
+    add_action('customize_controls_enqueue_scripts', 'hs_first_agency_customize_controls_enqueue_scripts');
+    function hs_first_agency_customize_controls_enqueue_scripts()
     {
         wp_enqueue_script('first-agency-customize-controls-toggle', get_template_directory_uri() . '/inc/customize/assets/customize-controls-toggle.js', array('jquery', 'customize-preview'), '1.30', true);
     }
 }
 
-if (!function_exists('first_agency_customize_register_settings_pannel')) {
-    add_action('customize_register', 'first_agency_customize_register_settings_pannel');
-    function first_agency_customize_register_settings_pannel($wp_customize)
+if (!function_exists('hs_first_agency_customize_register_settings_pannel')) {
+    add_action('customize_register', 'hs_first_agency_customize_register_settings_pannel');
+    function hs_first_agency_customize_register_settings_pannel($wp_customize)
     {
-        $wp_customize->add_panel('first_agency_settings_pannel', array(
+        $wp_customize->add_panel('hs_first_agency_settings_pannel', array(
             'priority' => 10,
             'capability' => 'edit_theme_options',
             'theme_supports' => '',
-            'title' => first_agency_Theme_Class::$theme_name . ' Customization',
+            'title' => hs_first_agency_Theme_Class::$theme_name . ' Customization',
             'description' => '',
         ));
     }
