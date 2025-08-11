@@ -26,8 +26,8 @@ if (!function_exists('hs_first_agency_getting_start_admin_notices')) {
     add_action('admin_notices', 'hs_first_agency_getting_start_admin_notices');
     function hs_first_agency_getting_start_admin_notices()
     {
-        $user_id = get_current_user_id();
-        if (! get_user_meta($user_id, 'hs_first_agency_notice_dismissed')) {
+        // $user_id = get_current_user_id();
+        // if (! get_user_meta($user_id, 'hs_first_agency_notice_dismissed')) {
 ?>
             <div class="updated notice notice-get-started-class is-dismissible" data-notice="get_started">
                 <div class="first-agency-getting-started-notice clearfix">
@@ -45,7 +45,7 @@ if (!function_exists('hs_first_agency_getting_start_admin_notices')) {
                             ?>
                         </h2>
 
-                        <a class="first-agency-btn-get-started button button-primary button-hero first-agency-button-padding" href="<?php echo esc_url(admin_url("admin.php?page=hs_first_agency__welcome")); ?>" data-name="" data-slug=""><?php esc_html_e('Get started with First Agency', 'hs-first-agency') ?></a><span class="first-agency-push-down">
+                        <a class="first-agency-btn-get-started button button-primary button-hero first-agency-button-padding" href="<?php echo esc_url(admin_url("admin.php?page=hs_first_agency_welcome")); ?>" data-name="" data-slug=""><?php esc_html_e('Get started with First Agency', 'hs-first-agency') ?></a><span class="first-agency-push-down">
                             <?php
                             /* translators: %1$s: Anchor link start %2$s: Anchor link end */
                             printf(
@@ -54,10 +54,11 @@ if (!function_exists('hs_first_agency_getting_start_admin_notices')) {
                                 '</a>'
                             );
                             ?>
+                            <a class="first-agency-btn-get-started button button-primary button-hero first-agency-button-padding" target="_blank" href="https://honarsystems.com/product/first-agency/" data-name="" data-slug=""><?php esc_html_e('Get First Agency Pro', 'hs-first-agency') ?></a>
                     </div><!-- /.first-agency-theme-notice-content -->
                 </div>
             </div>
 <?php
-        }
+        // }
     }
 }
