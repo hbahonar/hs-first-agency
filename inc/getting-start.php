@@ -26,8 +26,6 @@ if (!function_exists('hs_first_agency_getting_start_admin_notices')) {
     add_action('admin_notices', 'hs_first_agency_getting_start_admin_notices');
     function hs_first_agency_getting_start_admin_notices()
     {
-        // $user_id = get_current_user_id();
-        // if (! get_user_meta($user_id, 'hs_first_agency_notice_dismissed')) {
 ?>
             <div class="updated notice notice-get-started-class is-dismissible" data-notice="get_started">
                 <div class="first-agency-getting-started-notice clearfix">
@@ -59,6 +57,5 @@ if (!function_exists('hs_first_agency_getting_start_admin_notices')) {
                 </div>
             </div>
 <?php
-        // }
     }
 }
